@@ -20,6 +20,7 @@ html {
   3. Màu sắc
   4. Kiểu dáng(kiểu chữ, hình tròn, vuông?)
 */
+/* DUNG CHUNG*/
 .clear {
     clear: both;
 }
@@ -27,7 +28,28 @@ html {
 .text-white {
     color: #ccc !important;
 }
+.row{
+    margin-left: -8px;
+    margin-right: -8px;
+}
 
+.col{
+    float: left;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.col-half{
+        width: 50%;
+}
+.col-third{
+    width: 33.3333%;
+}
+.text-center{
+    text-align: center !important;
+}
+
+/* MAIN*/
 #main {
 
 }
@@ -174,11 +196,7 @@ html {
 #content .member-list{
     margin-top: 48px;
 }
-#content .member-item {
-    float: left; /* dan deu 3 anh theo chieu ngang */
-    width: calc(100% / 3);
-    text-align: center;
-}
+
 #content .member-name{
     font-size: 15px;
 
@@ -223,33 +241,131 @@ html {
 
 .places-list {
     margin-top: 32px;
-    
-
-}
-.places-item{
-    float: left;
-    width: 33.3333%;
+    margin-bottom: 48px;
 }
 .place-img{
     width: 100%;
+    display: block;
+}
+.place-img:hover{
+    opacity: 0.6;
 }
 .place-body{
-
+    font-size: 15px;
+    padding: 16px;
+    background-color: #fff;
 }
 .place-heading{
-
+    font-size: 15px;
+    font-weight: 600;
 }
 .place-time{
-
+    margin-top: 15px;
+    color: #757575;
 }
 .place-desc{
-
+    margin-top: 15px;
+    line-height: 1.4;
 }
 .place-buy-btn{
+    color: #fff;
+    background-color: #000;
+    text-decoration: none;
+    padding: 11px 16px;
+    display: inline-block;
+    margin-top: 15px;
+}
+.place-buy-btn:hover{
+    color: #000;background-color: #ccc;
 
 }
+
+
+
 #footer {
 
 }
 
 
+
+
+/* Lowps phu*/
+.modal{
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+.modal-body{
+    padding: 16px;
+}
+.modal-container{
+    background-color: #fff;
+    width: 900px;
+    max-width: calc(100% - 32px);
+    min-height: 200px;
+    position: relative;
+}
+.modal-header{
+    background-color: #009688;
+    height: 130px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    color: #fff;
+}
+.modal-heading-icon{
+    margin-right: 16px;
+
+}
+.modal-close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    color: #fff;
+    padding: 12px;
+    cursor: pointer;
+    opacity: 0.8;
+}
+.modal-close:hover{
+    opacity:1;
+}
+.modal-label{
+    display: block;
+    font-size: 15px;
+    margin-bottom: 12px;
+}
+.modal-input {
+    border: 1px solid #ccc;
+    width: 100%;
+    font-size: 15px;
+    padding: 10px;
+    margin-bottom: 24px;
+}
+#buy-tickets {
+    background-color: #009688;
+    border: none;
+    color: #fff;
+    width: 100%;
+    font-size: 15px;
+    text-transform: uppercase;
+    padding: 18px;
+    cursor: pointer;
+}
+#buy-tickets:hover {
+    opacity: 0.9;
+}
+.modal-footer{
+    padding: 16px;
+    text-align: right;
+    
+}
+.modal-footer a {
+    color: #2196F3;
+}
